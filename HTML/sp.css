@@ -1,0 +1,236 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0b1f3a 0%, #1e3251 100%);
+  color: #e1e8f0;
+  line-height: 1.6;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* Header Layout */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #284b63;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.header-left h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.header-left h1 a {
+  text-decoration: none;
+  color: #d0e8ff;
+  transition: color 0.3s ease;
+}
+
+.header-left h1 a:visited {
+  color: #d0e8ff;
+}
+
+.header-left h1 a:hover {
+  color: #00b3c6;
+}
+
+.header-left h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #a9c6db;
+  margin-top: 6px;
+}
+
+.linkedin-icon {
+  width: 40px;
+  height: 40px;
+  filter: brightness(0) invert(1); /* white icon on dark bg */
+  transition: filter 0.3s ease;
+}
+
+.header-right a:hover .linkedin-icon {
+  filter: brightness(0) invert(0.6) sepia(1) saturate(5) hue-rotate(150deg);
+}
+
+/* Nav */
+.navbar {
+  display: flex;
+  gap: 30px;
+  font-size: 1.2rem;
+  padding: 10px 5px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #284b63;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #c4d7f2;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  padding-bottom: 3px;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  color: #00b3c6;
+  border-color: #00b3c6;
+}
+
+/* Main Content */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Intro Section (from homepage) */
+.intro {
+  margin-bottom: 50px;
+}
+
+.intro h3 {
+  font-size: 2.2rem;
+  color: #d0e8ff;
+  margin-bottom: 15px;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  color: #c4d7f2;
+  line-height: 1.8;
+}
+
+/* Posts Section (from homepage) */
+.posts h3 {
+  font-size: 1.9rem;
+  margin-bottom: 25px;
+  color: #d0e8ff;
+}
+
+.post-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.post-card {
+  background: #1e3251;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 179, 198, 0.3);
+  padding: 20px 25px;
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #d0e8ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.post-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 179, 198, 0.5);
+}
+
+.post-card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #00b3c6;
+}
+
+.post-card p {
+  flex-grow: 1;
+  font-size: 1rem;
+  color: #a9c6db;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.read-more {
+  align-self: flex-start;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #00b3c6;
+  text-decoration: none;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.read-more:hover,
+.read-more:focus {
+  border-color: #00b3c6;
+  outline: none;
+}
+
+/* About Page Styling */
+.about-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 25px;
+  background-color: #1e3251;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 179, 198, 0.3);
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  color: #d0e8ff;
+}
+
+.profile-photo {
+  width: 280px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0, 179, 198, 0.4);
+  flex-shrink: 0;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00b3c6;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  color: #c4d7f2;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .about-text {
+    min-width: auto;
+  }
+}
